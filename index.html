@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <script src="/app.js" defer></script>
+    <!-- <script src="/app.js" defer></script> -->
     <title>Etch-A-Sketch</title>
 </head>
 <body>
@@ -20,9 +20,10 @@
         <button type="button">Reset</button>
     </div>
     <div class="input-field">
-        <input type="text">
-        <button type="button">set size</button>
+        <input type="text" onchange="changeGridSize(this.value)">
+        <button>set size</button>
     </div>
 </div>
 </body>
+<script src="/app.js"></script>
 </html>
