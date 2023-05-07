@@ -1,4 +1,4 @@
-
+let color = 'white';
 // This function populates the board with the number of size input by the user
 function populateGrid(size) {
   let board = document.querySelector(".board");
@@ -11,15 +11,33 @@ function populateGrid(size) {
 
   for (let i = 0; i < gSize; i++) {
     let square = document.createElement("div");
-    square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "black";
-    })
+    square.addEventListener("mouseover", randomColor)
     board.insertAdjacentElement("beforeend", square);
-  }
-}
+  };
+};
 
 function changeGridSize (input) {
     if (input >= 2 && input <= 100) {
         populateGrid(input);
     };
+};
+
+function changeColor(myChoice) {
+    color = myChoice;
+};
+
+function randomColor() {
+
+  if (color == 'random') {
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;  
+  } else {
+    this.style.backgroundColor = color;
+  };
+
+};
+
+function resetGrid () {
+  let board = document.querySelector(".board");
+  let grids = board.querySelectorAll("div");
+  grids.forEach((div) => div.style.backgroundColor = 'white');
 };

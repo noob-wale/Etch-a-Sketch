@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <!-- <script src="/app.js" defer></script> -->
+    <script src="/app.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
 <body>
@@ -14,16 +14,15 @@
     <p class="coloring-mode"></p>
     <div class="board"></div>
     <div class="buttons">
-        <button type="button">Black</button>
-        <button type="button">Eraser</button>
-        <button type="button">Color</button>
-        <button type="button">Reset</button>
+        <button type="button" onclick="changeColor('black')">Black</button>
+        <button type="button" onclick="changeColor('white')">Eraser</button>
+        <button type="button" onclick="changeColor('random')">Color</button>
+        <button type="button" onclick="resetGrid()">Reset</button>
     </div>
     <div class="input-field">
-        <input type="text" onchange="changeGridSize(this.value)">
+        <input type="text" placeholder="input number for gridsize" onchange="changeGridSize(this.value)">
         <button>set size</button>
     </div>
 </div>
 </body>
-<script src="/app.js"></script>
 </html>
