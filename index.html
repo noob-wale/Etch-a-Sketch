@@ -14,10 +14,10 @@
     <p class="coloring-mode"></p>
     <div class="board"></div>
     <div class="buttons">
-        <button type="button" onclick="changeColor('black')">Black</button>
-        <button type="button" onclick="changeColor('white')">Eraser</button>
-        <button type="button" onclick="changeColor('random')">Color</button>
-        <button type="button" onclick="resetGrid()">Reset</button>
+        <button type="button" class="mybtn-black" onclick="changeColor('black')">Black</button>
+        <button type="button" class="mybtn-white" onclick="changeColor('white')">Eraser</button>
+        <button type="button" class="mybtn-random" onclick="changeColor('random')">Color</button>
+        <button type="button" class="mybtn-reset" onclick="resetGrid()">Reset</button>
     </div>
     <div class="input-field">
         <input type="text" placeholder="input number for gridsize" onchange="changeGridSize(this.value)">
