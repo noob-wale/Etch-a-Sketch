@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script src="/app.js" defer></script>
     <title>Etch-A-Sketch</title>
-</head>
-<body>
-<div class="container">
-    <h1 class="heading">Etch-A-Sketch</h1>
-    <p class="coloring-mode"></p>
-    <div class="board"></div>
-    <div class="buttons">
-        <button type="button" class="mybtn-black" onclick="changeColor('black')">Black</button>
-        <button type="button" class="mybtn-white" onclick="changeColor('white')">Eraser</button>
-        <button type="button" class="mybtn-random" onclick="changeColor('random')">Color</button>
-        <button type="button" class="mybtn-reset" onclick="resetGrid()">Reset</button>
-    </div>
-    <div class="input-field">
-        <input type="text" placeholder="input number for gridsize" onchange="changeGridSize(this.value)">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Etch-A-Sketch</h1>
+      <p class="coloring-mode"></p>
+      <div class="board"></div>
+      <div class="buttons">
+        <button
+          type="button"
+          class="mybtn-black"
+          onclick="changeColor('black')"
+        >
+          Black
+        </button>
+        <button
+          type="button"
+          class="mybtn-white"
+          onclick="changeColor('white')"
+        >
+          Eraser
+        </button>
+        <button
+          type="button"
+          class="mybtn-random"
+          onclick="changeColor('random')"
+        >
+          Color
+        </button>
+        <button type="button" class="mybtn-reset" onclick="resetGrid()">
+          Reset
+        </button>
+      </div>
+      <div class="input-field">
+        <input
+          type="text"
+          placeholder="input number for gridsize"
+          onchange="changeGridSize(this.value)"
+        />
         <button>set size</button>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

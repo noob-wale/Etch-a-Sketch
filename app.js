@@ -1,4 +1,5 @@
 let color = 'white';
+let mouseClick = true;
 // This function populates the board with the number of size input by the user
 function populateGrid(size) {
   let board = document.querySelector(".board");
@@ -27,13 +28,13 @@ function changeColor(myChoice) {
 };
 
 function randomColor() {
-
-  if (color == 'random') {
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;  
-  } else {
-    this.style.backgroundColor = color;
+  if (mouseClick) {
+    if (color == 'random') {
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;  
+    } else {
+      this.style.backgroundColor = color;
+    };
   };
-
 };
 
 function resetGrid () {
@@ -41,3 +42,12 @@ function resetGrid () {
   let grids = board.querySelectorAll("div");
   grids.forEach((div) => div.style.backgroundColor = 'white');
 };
+
+document.querySelector('.board').addEventListener('click', () => {
+  mouseClick = !mouseClick;
+  if (mouseClick) {
+    document.querySelector('.coloring-mode').textContent = 'You Are Coloring!';
+  } else {
+    document.querySelector('.coloring-mode').textContent = 'You are not Coloring!';
+  }
+})
