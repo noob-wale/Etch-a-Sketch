@@ -50,4 +50,4 @@ document.querySelector('.board').addEventListener('click', () => {
   } else {
     document.querySelector('.coloring-mode').textContent = 'You are not Coloring!';
   }
-})
+});
